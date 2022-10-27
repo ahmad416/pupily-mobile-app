@@ -14,15 +14,16 @@ import {
 
 const Signuprow = ({image, text, desc, onPress}) => {  
   return (
-    <TouchableOpacity style={{backgroundColor:COLORS.white, margin:10, elevation:5, 
+    <TouchableOpacity style={{backgroundColor:COLORS.white, margin:10, elevation:5, paddingHorizontal:5,
             borderRadius:15, borderWidth:1,borderColor:COLORS.white, paddingVertical:3}}
             onPress={onPress}> 
-        <View style={{flexDirection:'row'}}>
+        <View style={{flexDirection:'row', alignItems:'center', padding:15}}>
           <Image source={image} style={{marginHorizontal:10, alignSelf:'center'}}></Image> 
-          <View>
-            <Text style={{color:COLORS.black, fontSize:20}} numberOfLines={1} >{text}</Text> 
+
+          <Text style={{color:COLORS.black, fontSize:20}} numberOfLines={1} >{text}</Text> 
+          {/* <View>
             <Text style={{color:COLORS.descColor, fontSize:18, paddingEnd:10}} numberOfLines={2} >{desc}</Text>
-          </View>
+          </View> */}
         </View> 
     </TouchableOpacity>
   );

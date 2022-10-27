@@ -2,6 +2,7 @@ import React from 'react';
 import {COLORS} from '../components/Colors' 
 import { TextInput } from 'react-native-paper';
 import RBSheet from "react-native-raw-bottom-sheet";
+import {Actions} from 'react-native-router-flux';
 import {
   SafeAreaView,
   ScrollView,
@@ -24,7 +25,9 @@ const Signup = () => {
       <ScrollView  > 
         <View style={{alignItems:'center', backgroundColor:'#fff'}}>
           <View style={{width:'95%', flexDirection:'row', margin:15}}>
-            <Image source={require('../images/arrowback.png')} style={{margin:20}}></Image>
+            <TouchableOpacity onPress={()=> Actions.pop()}> 
+              <Image source={require('../images/arrowback.png')} style={{margin:20}}></Image>
+            </TouchableOpacity>
           </View>
           <View style={{width:'90%'}}>
           <Text style={{fontSize:40, fontWeight:'bold', alignSelf:'center', color:COLORS.sign_up}}>Sign up</Text>

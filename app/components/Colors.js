@@ -9,7 +9,8 @@ export const COLORS = {
   sign_up: '#0B2149',
   faintText: "#494949",
   descColor: '#8692A6',
-  transparent: '#00000000'
+  transparent: '#00000000',
+  blue: '#2F327D',
 }
 
 

@@ -19,11 +19,9 @@ const InputTextView = ({placeholdertext, isPass}) => {
   const [passwordVisible, setPasswordVisible] = useState(true);
   return (
     <View> 
-      <TextInput style={{fontSize:17}}
-                 
+      <TextInput style={{fontSize:17, backgroundColor:COLORS.transparent}}
               secureTextEntry={isPass && passwordVisible} 
-              right={isPass && <TextInput.Icon icon={passwordVisible ? "eye" : "eye-off"} onPress={() => setPasswordVisible(!passwordVisible)} />}
-  
+              right={isPass && <TextInput.Icon icon={passwordVisible ? require('../images/eye.png') : require('../images/eyeoff.png')} onPress={() => setPasswordVisible(!passwordVisible)} />}
               activeUnderlineColor={COLORS.main_P }
               backgroundColor={COLORS.backColor}
               padding={5} 
@@ -33,7 +31,6 @@ const InputTextView = ({placeholdertext, isPass}) => {
               outlineColor={COLORS.main_P} 
               label={placeholdertext}
               mode={'flat'}
-              // onChangeText={text => setText(text)}
           />
     </View>
   );

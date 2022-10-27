@@ -15,13 +15,12 @@ import RBSheet from "react-native-raw-bottom-sheet";
 import Signuprow from '../components/Signuprow';
 import { Actions } from 'react-native-router-flux';
 
-const SignupDialog = ({sheet}) => { 
-this.RBSheet = sheet;
+const SignupDialog = ({sheet}) => {
   return (
     <SafeAreaView> 
-      <ScrollView  > 
+      <ScrollView> 
       <View style={{backgroundColor:COLORS.tra, borderRadius:20, padding:10}}>
-        <TouchableOpacity onPress={() => this.RBSheet.close()}>
+        <TouchableOpacity onPress={() => sheet.current.close()}>
           <Image source={require('../images/cross.png')} style={{alignSelf:'flex-end'}}></Image>
         </TouchableOpacity>
       <View>
@@ -31,7 +30,7 @@ this.RBSheet = sheet;
       <Signuprow image={require('../images/parent.png')} 
                   text={'Parent'} 
                   desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
-                  onPress={ () => {this.RBSheet.close(); Actions.push("Signup") }}/>
+                  onPress={ () => {sheet.current.close(); Actions.push("Signup") }}/>
 
       <Signuprow image={require('../images/school.png')} 
                  text={'School and District'} 

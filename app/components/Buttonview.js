@@ -20,7 +20,7 @@ const Buttonview = ({text, full, filled}) => {
       }
   }
   return (
-    <View style={[styles.back, full && {width:'100%'}, filled && styles.fill]}
+    <View style={[styles.back, full && {width:'100%', paddingVertical:5}, filled && styles.fill]}
         onPress={onPress(text)}> 
       <Text style={[styles.empty, filled && styles.fill, {backgroundColor:COLORS.transparent}]}>{text}</Text>
     </View>
