@@ -28,7 +28,7 @@ const Welcome = (index) => {
            <Image source={require('../images/logo.png')} style={{margin:60}}></Image>
            <Text style={[stylesheet.textmain_P,{fontSize:40, fontWeight:'bold'}]}>Welcome</Text>
            <Text style={{color:COLORS.blue}}>to Personalized Learning</Text>
-           <Image source={require('../images/welcomegif.gif')} style={{margin:20}}></Image>
+           <Image source={require('../images/welcomeimage.png')} style={{margin:20}}></Image>
            <View 
            style={{width:'100%', flexDirection:'row', justifyContent:'space-between', paddingHorizontal:50, paddingVertical:30}}>
               <TouchableOpacity onPress={ () => Actions.push("Signin")}>
